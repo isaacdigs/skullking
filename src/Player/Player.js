@@ -48,7 +48,7 @@ export default function Player() {
 
   return (
     <div style={style}>
-      <input type="text" style={{fontWeight: "bold", textAlign: "center", fontSize: "20px", border: "none", width: "100%"}}></input>
+      <input type="text" style={{fontWeight: "bold", textAlign: "center", fontSize: "20px", border: "none", width: "90%"}}></input>
       <hr />
       <p style={{fontWeight: "bold", backgroundColor: "#ddd", padding: "2px"}}>총 점수: <p>{totalScore}</p></p>
       <hr />

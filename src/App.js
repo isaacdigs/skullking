@@ -1,24 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Player from './Player/Player'
 
 function App() {
+  //adding players
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 className="appTitle">스컬킹 점수표</h1>
+      <div className="ScoreBoard">
+        <Player />
+        <Player />
+        <Player />
+        <Player />
+        <Player />
+        <Player />
+      </div>
     </div>
   );
 }

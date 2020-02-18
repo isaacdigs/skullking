@@ -9,7 +9,6 @@ export default function Player() {
     padding: "16px",
     margin: "20px",
     border: "1px solid black",
-    width: "100px"
   }
 
   //state variables
@@ -50,11 +49,11 @@ export default function Player() {
     <div style={style}>
       <input type="text" style={{fontWeight: "bold", textAlign: "center", fontSize: "20px", border: "none", width: "90%"}}></input>
       <hr />
-      <p style={{fontWeight: "bold", backgroundColor: "#ddd", padding: "2px"}}>총 점수: <p>{totalScore}</p></p>
+      <p style={{fontWeight: "bold", backgroundColor: "#ddd", padding: "2px", fontSize: "1em"}}>총 점수: <p>{totalScore}</p></p>
       <hr />
       <p style={{fontWeight: "bold"}}> {currentRound} {currentRound !== "끝" ? "라운드" : null} </p>
       <hr />
-      <p>예상 트릭:
+      <p style={{fontSize: "0.8em"}}>예상 트릭:
         <Popup
           trigger={<div className="menu-item"> {currentTrickGuess} </div>}
           position="bottom"
@@ -81,7 +80,7 @@ export default function Player() {
           </div>
         </Popup>
       </p>
-      <p>보너스:
+      <p style={{fontSize: "0.8em"}}>보너스:
         <Popup
           trigger={<div className="menu-item"> {currentBonus} </div>}
           position="bottom"
@@ -108,7 +107,7 @@ export default function Player() {
           </div>
         </Popup>
       </p>
-      <p>실제 트릭:
+      <p style={{fontSize: "0.8em"}}>실제 트릭:
         <Popup
           trigger={<div className="menu-item"> {tricksWon} </div>}
           position="bottom"
@@ -134,7 +133,7 @@ export default function Player() {
           </div>
         </Popup>
       </p>
-      <p>획득 점수: 
+      <p style={{fontSize: "0.8em"}}>획득 점수: 
         <p>{currentScore}</p>
       </p>
       <button 
@@ -153,7 +152,7 @@ export default function Player() {
           }
         }
       }
-      style={{fontSize: "16px", fontWeight: "bold"}}
+      style={{fontSize: "1em", fontWeight: "bold", boxShadow: "2px 2px #eee"}}
       > 
         {done === false ? "적용" : "리셋"}
       </button>

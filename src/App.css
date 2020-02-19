@@ -1,5 +1,12 @@
+.App {
+  background-image: url(./skullkingBG.jpg);
+}
+
 .appTitle {
   text-align: center;
+  margin-top: 0;
+  padding-top: 15px;
+  text-shadow: black;
 }
 
 
@@ -13,12 +20,17 @@
 }
 
 .menu {
-  width: 100%;
+  width: 150%;
   display: flex;
-  background: #eeeeee;
+  background: rgba(255, 255, 255, 0.85);
   align-items: flex-start;
   flex-wrap: wrap;
 }
+
+.bonus-menu {
+  width: 200% !important;
+}
+
 .menu-item {
   cursor: pointer;
   padding: 10px 5px;
@@ -26,6 +38,11 @@
   border-bottom: 1px solid rgb(187, 187, 187);
   font-size: 2.5em;
 }
+
+.bonus-menu-item {
+  font-size: 1.5em;
+}
+
 .menu-item:hover {
   color: #2980b9;
 }

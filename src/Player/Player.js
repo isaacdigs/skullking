@@ -5,6 +5,7 @@ export default function Player() {
   
   // the style object
   const style = {
+    minWidth: "100px",
     textAlign: "center",
     padding: "3px",
     margin: "10px",

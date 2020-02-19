@@ -6,8 +6,8 @@ export default function Player() {
   // the style object
   const style = {
     textAlign: "center",
-    padding: "16px",
-    margin: "20px",
+    padding: "3px",
+    margin: "10px",
     border: "1px solid black",
   }
 
@@ -21,7 +21,7 @@ export default function Player() {
   if (currentTrickGuess !== 0 && currentTrickGuess === tricksWon) {
     currentScore = currentTrickGuess * 20 + currentBonus;
   } else if (currentTrickGuess === 0 && currentTrickGuess === tricksWon) {
-    currentScore = currentRound * 10
+    currentScore = currentRound * 10 + currentBonus;
   } else if (currentTrickGuess === 0 && currentTrickGuess !== tricksWon) {
     currentScore = -(currentRound * 10)
   } else if (currentTrickGuess !== 0 && currentTrickGuess !== tricksWon) {
@@ -47,13 +47,13 @@ export default function Player() {
 
   return (
     <div style={style}>
-      <input type="text" style={{fontWeight: "bold", textAlign: "center", fontSize: "20px", border: "none", width: "90%"}}></input>
+      <input type="text" style={{fontWeight: "bold", textAlign: "center", fontSize: "2em", border: "none", width: "90%"}}></input>
       <hr />
-      <p style={{fontWeight: "bold", backgroundColor: "#ddd", padding: "2px", fontSize: "1em"}}>총 점수: <p>{totalScore}</p></p>
+      <p style={{fontWeight: "bold", backgroundColor: "#ddd", fontSize: "1em", margin: "0"}}>총 점수: <p style={{fontSize:"2em", margin: "0"}}>{totalScore}</p></p>
       <hr />
       <p style={{fontWeight: "bold"}}> {currentRound} {currentRound !== "끝" ? "라운드" : null} </p>
       <hr />
-      <p style={{fontSize: "0.8em"}}>예상 트릭:
+      <p style={{fontSize: "0.8em", margin: "0"}}>예상 트릭:
         <Popup
           trigger={<div className="menu-item"> {currentTrickGuess} </div>}
           position="bottom"
@@ -80,7 +80,7 @@ export default function Player() {
           </div>
         </Popup>
       </p>
-      <p style={{fontSize: "0.8em"}}>보너스:
+      <p style={{fontSize: "0.8em", margin: "0"}}>보너스:
         <Popup
           trigger={<div className="menu-item"> {currentBonus} </div>}
           position="bottom"
@@ -93,6 +93,8 @@ export default function Player() {
         >
 
           <div className="menu">
+          <div className="menu-item" onClick={() => setCurrentBonus( -10 )}>-20</div>
+            <div className="menu-item" onClick={() => setCurrentBonus( -10 )}>-10</div>
             <div className="menu-item" onClick={() => setCurrentBonus( 0 )}>0</div>
             <div className="menu-item" onClick={() => setCurrentBonus( 10 )}>10</div>
             <div className="menu-item" onClick={() => setCurrentBonus( 20 )}>20</div>
@@ -104,10 +106,12 @@ export default function Player() {
             <div className="menu-item" onClick={() => setCurrentBonus( 80 )}>80</div>
             <div className="menu-item" onClick={() => setCurrentBonus( 90 )}>90</div>
             <div className="menu-item" onClick={() => setCurrentBonus( 100 )}>100</div>
+            <div className="menu-item" onClick={() => setCurrentBonus( 110 )}>110</div>
+            <div className="menu-item" onClick={() => setCurrentBonus( 120 )}>120</div>
           </div>
         </Popup>
       </p>
-      <p style={{fontSize: "0.8em"}}>실제 트릭:
+      <p style={{fontSize: "0.8em", margin: "0"}}>실제 트릭:
         <Popup
           trigger={<div className="menu-item"> {tricksWon} </div>}
           position="bottom"
@@ -133,8 +137,8 @@ export default function Player() {
           </div>
         </Popup>
       </p>
-      <p style={{fontSize: "0.8em"}}>획득 점수: 
-        <p>{currentScore}</p>
+      <p style={{fontSize: "0.8em", margin: "0"}}>획득 점수: 
+        <p style={{fontSize: "2.5em", margin: "0"}}>{currentScore}</p>
       </p>
       <button 
         onClick={() => {

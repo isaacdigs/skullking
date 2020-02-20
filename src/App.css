@@ -1,7 +1,9 @@
-.App {
+/* .App {
   background-image: url(./skullkingBG.jpg);
+  min-height: 100%;
+  background-size: 100% 100%;
 }
-
+ */
 .appTitle {
   text-align: center;
   margin-top: 0;

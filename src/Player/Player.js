@@ -113,6 +113,8 @@ export default function Player() {
             <div className="menu-item bonus-menu-item" onClick={() => setCurrentBonus( 100 )}>100</div>
             <div className="menu-item bonus-menu-item" onClick={() => setCurrentBonus( 110 )}>110</div>
             <div className="menu-item bonus-menu-item" onClick={() => setCurrentBonus( 120 )}>120</div>
+            <div className="menu-item bonus-menu-item" onClick={() => setCurrentBonus( 130 )}>130</div>
+            <div className="menu-item bonus-menu-item" onClick={() => setCurrentBonus( 140 )}>140</div>
           </div>
         </Popup>
       </p>

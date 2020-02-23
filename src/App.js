@@ -15,6 +15,7 @@ function App() {
         <Player />
         <Player />
         <Player />
+        <Player />
       </div>
     </div>
   );
